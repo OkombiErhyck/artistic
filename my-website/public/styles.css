@@ -1,0 +1,180 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background: #f0f0f0;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('img/R.jpeg') center/cover no-repeat fixed;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  
+  
+  .hero-content {
+    background: rgba(0, 0, 0, 0.894);
+    padding: 30px;
+    border-radius: 20px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    border: none;
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #ff3b2e;
+    transform: scale(1.05);
+  }
+  
+  /* Content Cards */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 60px 20px;
+    max-width: 1500px;
+    margin: auto;
+  }
+  
+  .card {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+    position: relative; 
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  
+  .card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-text {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: relative; 
+  }
+  
+
+  .card.reverse img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+  .card.reverse {
+    
+    flex-direction: row-reverse;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 1rem;
+  }
+  .body {
+     color: rgb(136, 80, 7);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Parallax on Scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero {
+      background-attachment: fixed;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+    }
+  
+    .card img {
+      width: 100%;
+    }
+  }
+  .hero h1 {
+    font-size: 2.5rem; /* Smaller heading for tablets */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Smaller paragraph text for tablets */
+}
+
+.hero-content {
+    padding: 20px; /* Reduced padding for smaller screens */
+}
+
+
+@media (max-width: 480px) {
+.hero h1 {
+    font-size: 1.8rem; /* Smaller heading for small devices */
+}
+
+.hero p {
+    font-size: 1rem; /* Adjust paragraph size for mobile devices */
+}
+
+.hero-content {
+    padding: 15px; /* Further reduced padding */
+}
+}
+
+
